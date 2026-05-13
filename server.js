@@ -19,6 +19,9 @@ const pool = new pg.Pool({
   database: process.env.DB_NAME || 'propfinder',
   user: process.env.DB_USER || 'propfinder_user',
   password: process.env.DB_PASSWORD || 'propfinder123',
+ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 // Test database connection
